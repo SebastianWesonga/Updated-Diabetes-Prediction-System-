@@ -1,0 +1,181 @@
+        body,
+        html {
+            height: 100%;
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .bg {
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-left: 35%;
+            margin-right: 34%;
+            display: block;
+            width: inherit;
+            height: inherit;
+        }
+        
+        input {
+            float: right;
+        }
+        
+        h2 {
+            padding: 5%;
+            color: #fff;
+            background-color: #034f84;
+            width: 100%;
+        }
+.header{
+                padding: 5%;
+            color: #fff;
+            background-color: #034f84;
+            width: 100%;
+}
+        
+        form {
+            max-width: 500px;
+            /* padding: 10px 20px; */
+            background: #92a8d1;
+            margin: 10px auto;
+            /* padding: 20px; */
+            /* background: #f4f7f8; */
+            border-radius: 8px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .form-content {
+            border-radius: 8px;
+            padding: 10px 20px;
+            padding: 20px;
+        }
+        
+        div {
+            padding: 2.5%;
+        }
+        /* //////////////////////////////////////////////// */
+        /* //////////////////////////////////////////////// */
+        /* //////////////////////////////////////////////// */
+        /* //////////////////////////////////////////////// */
+        /* Style the tab */
+        
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        /* Style the buttons that are used to open the tab content */
+        
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+        /* Change background color of buttons on hover */
+        
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        /* Create an active/current tablink class */
+        
+        .tab button.active {
+            background-color: #ccc;
+        }
+        /* Style the tab content */
+        
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+        /*for fading after select tabs */
+        
+        .tabcontent {
+            animation: fadeEffect 1s;
+            /* Fading effect takes 1 second */
+        }
+        /* Go from zero to full opacity */
+        
+        @keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        /*//////////////////////////////*/
+        
+        body,
+        html {
+            height: 100%;
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            /*position: fixed;
+            bottom: 0;*/
+            width: 100%;
+            position: sticky;
+            top: 0;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .navbar a:hover {
+            background: #f1f1f1;
+            color: black;
+        }
+        
+        .navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        
+        .main {
+            padding: 16px;
+            margin-bottom: 30px;
+        }
+.profile_pic{
+    height: 50px;
+    border-radius:55px;
+}
+.left{
+float:left;
+margin-left:50px;}
+.right{
+    float:right;
+    margin-right:500px;
+}
+ul{
+    background-color: #92a8d1;
+    border-radius: 5px;
+    padding:5px;
+}

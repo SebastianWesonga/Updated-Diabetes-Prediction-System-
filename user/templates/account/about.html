@@ -1,0 +1,31 @@
+{% extends 'base2.html'%} 
+{% block title%}About{% endblock title%}
+{% block content %}
+{% load static %}
+<div>
+        <h3>About us</h3>
+        <p>
+            We intend to build a system that predicts diabetes accurately with little effort.Sinceit is becoming big issue in our societ.
+        </p>
+    </div>
+    <div>
+        <h3>Contact us</h3>
+        <p>
+            Sebastian wesonga <br>0706475289 <br> wesongasebastian4@gmail.com <br>Gabriel Wainaina <br>0743312294
+        </p>
+    </div>
+
+
+    <div>
+        <h3>OUR VISION OUR MISSION OUR VALUES</h3>
+        <p>
+            To provide the best medical service available at no costand which is easily available
+        </p>
+    </div>
+
+    <div class="navbar">
+      <a href="{% url "user:dashboard" %}">Home</a>
+        <a href="{% url "user:logout" %}">Log Out</a>
+    </div>
+
+    {% endblock content %}

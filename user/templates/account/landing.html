@@ -1,0 +1,21 @@
+{% extends 'base2.html' %}
+{% block title %}Landing{% endblock title %}
+{% block content %}
+{% load static %}
+<div id="haveDiabetes">
+        <h3>Sorry</h3>
+        <p>you have Diabetes</p>
+    </div>
+
+    <div id="noDiabetes">
+        <h3>Congrats</h3>
+        <p>you do not have Diabetes</p>
+    </div>
+
+
+    <div class="navbar">
+      <a href="{% url "user:dashboard" %}">Back</a>
+      <a href="{% url "user:logout" %}">Log Out</a>
+    </div>
+    {% endblock content %}
+

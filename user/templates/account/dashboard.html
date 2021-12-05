@@ -1,0 +1,62 @@
+{% extends 'base2.html' %}
+{% block title %}Diabetes{% endblock title %}
+{% block content %}
+{% load static %}
+<div id="questions" class="">
+
+        <form id=" questions_form" name="questions_form" method="post">
+            <div class="header">
+              <a href="{% url 'user:edit' %}">
+              <img class="profile_pic" src="{% if request.user.user_profile.photo %}{{ request.user.user_profile.photo.url  }}{% else %}{% static "img/no_image.png" %}{% endif %}" alt="John Doe"></a>
+              <h3>Hi {{ request.user.username }}, answer the following:</h3>
+            </div>
+            <div class="">
+                <div>
+                  <label for="">Pregnacies</label>
+                    {{ service_form.pregnacies }}
+                </div>
+                <div>
+                    <label for="">Glucose</label>
+                    {{ service_form.glucose }}
+                </div>
+                <div>
+                    <label for="">Blood Pressure</label>
+                    {{ service_form.blood_pressure}}
+                </div>
+                 <div>
+                    <label for="">Skin Tenderness</label>
+                    {{ service_form.skin_thickness}}
+                </div>
+
+                <div>
+                    <label for="">Insulin</label>
+                    {{ service_form.insulin }}
+                </div>
+                <div>
+                    <label for="">Bmi</label>
+                    {{ service_form.bmi }}
+                </div>
+                <div>
+                    <label for="">Diabetes pedigree function</label>
+                    {{service_form.diabetes_pedigree}}
+                </div>
+                <div>
+                    <!-- redundant because iko kwa registration form -->
+                    <label for="">Age</label>
+                    {{ service_form.age }}
+                </div>
+                {% csrf_token %}
+                <div>
+               <input type="submit" value="Submit">
+               </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="navbar">
+      <a href="{% url "user:dashboard"%}">Home</a>
+        <a href="{% url "user:about"%}">About</a>
+        <a href="{% url "user:logout"%}">Log Out</a>
+    </div>
+    {% endblock content %}

@@ -1,0 +1,67 @@
+{% extends 'base2.html' %}
+{% block title %}Diabetes{% endblock title %}
+{% block content %}
+{% load static %}
+<div id="questions" class="">
+  <div class="left">
+
+        <form id=" questions_form" name="questions_form" method="post" enctype="multipart/form-data">
+            <div class="header">
+              <img class="profile_pic" src="{% if request.user.user_profile.photo %}{{request.user.user_profile.photo.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" alt="John Doe">
+              <h3>Hi {{ request.user.username }}, edit your profile:</h3>
+            </div>
+            <div class="">
+                <div>
+                  <label for="">Photo</label>
+                    {{ edit_form.photo }}
+                </div>
+               
+                <div>
+                  <label for="">Gender</label>
+                    {{ edit_form.gender }}
+                </div>
+
+                <div>
+                  <label for="">Telephone</label>
+                    {{ edit_form.telephone }}
+                </div>
+
+                <div>
+                  <label for="">Address</label>
+                    {{ edit_form.address }}
+                </div>
+                <div>
+                  <label for="">Date of birth</label>
+                    {{ edit_form.date_of_birth }}
+                </div>
+
+                               {% csrf_token %}
+              <div>
+               <input type="submit" value="Update">
+               </div>
+            </div>
+        </form>
+        </div>
+        <div class="right">
+        <div id="questions_form">
+          <div class="header">
+            <h3>My past records</h3>
+           </div>
+           <div class="">
+             {% for s in services %}
+             <ul>
+               <li>{{ s.created }}</li>
+            </ul>
+            {% endfor %}
+            </div>
+          </div>
+    </div>
+    </div>
+
+
+    <div class="navbar">
+      <a href="{% url "user:dashboard" %}">Home</a>
+        <a href="{% url "user:about" %}">About</a>
+        <a href="{% url "user:logout" %}">Log Out</a>
+    </div>
+    {% endblock content %}

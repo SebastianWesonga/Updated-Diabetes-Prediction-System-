@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Register Account{% endblock title %}
+{% block content %}
+{% load static %}
+
+<div class="caption center-align">
+        <h3>Welcome to Diabetes Smart Health Prediction </h3>
+    </div>
+    <br>
+    <div class="bg">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'signup')">signup</button>
+            <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'login')">login</button>
+
+        </div>
+
+        <div id="signup" class="tabcontent">
+            <!-- NO PASSWORD FUNCTIONALTY    -->
+            <form id=" signup_form" name="signup_form" method="post">
+                <h2>Sign up</h2>
+                <div class="form-content">
+                    <div>
+                        <label for="">Username</label>
+                        {{ register_form.username }}
+                    </div>
+
+                    <div>
+                        <label for="">First Name</label>
+                        {{ register_form.first_name }}
+                    </div>
+                    <div>
+                        <label for="">Last Name</label>
+                        {{ register_form.last_name }}
+                    </div>
+                    <div>
+                        <label for="">Email</label>
+                        {{ register_form.email }}
+                    </div>
+                    <div>
+                        <label for="">Password</label>
+                        {{ register_form.password }}
+                    </div>
+                    <div>
+                      <label for="">Password</label>
+                      {{ register_form.password2 }}
+                    </div>
+                    {% csrf_token %}
+                    <div>
+                    <input type="submit" value="Sign Up">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="login" class="tabcontent">
+            <form id=" login_form" name="login_form" method="post">
+                <h2>Log in</h2>
+                <div class="form-content">
+                    <div>
+                        {{ form.username }}
+                        <label for="">Username</label>
+                    </div>
+                    <div>
+                        {{ form.password }}
+                        <label for="">Password</label>
+                    </div>
+                    {% csrf_token %}
+                    <input type="submit" value="Sign In">
+                    <p>Forgot password?</p>
+                    <a href="{% url "user:password_reset" %}">Reset password</a>
+                </div>
+            </form>
+        </div>
+
+
+        <script>
+            document.getElementById("defaultOpen").click();
+        </script>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About us.html">About</a>
+        <a href="{% url "user:logout" %}">Log Out</a>
+    </div>
+{% endblock content %}
